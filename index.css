@@ -1,0 +1,506 @@
+body {
+    width: 100%;
+    background: #fff;
+    display: block;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 300 !important;
+}
+
+table.agileits_figure_banner_bottom {
+    background: #ffffff;
+}
+
+table.combo {
+    background: #f5f5f5;
+}
+
+table.agileinfo_bg_text,
+table.agileits_footer {
+    background: #212121;
+}
+
+html {
+    width: 100%;
+}
+
+table {
+    font-size: 14px;
+    border: 0;
+}
+
+table.map tr td iframe {
+    width: 100%;
+    height: 200px;
+}
+
+.screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8)
+}
+
+.bgMusicBtn {
+    position: fixed;
+    width: 150px;
+    height: 50px;
+    top: 50%;
+    left: 1%;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 25px;
+    background: pink;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.birthVideoFirst {
+    position: fixed;
+    width: 850px;
+    height: 500px;
+    left: 50%;
+    top: 100px;
+    margin-left: -425px
+}
+
+.seeVideoBtn {
+    width: 135px;
+    height: 32px;
+    background: transparent;
+    color: white;
+    line-height: 32px;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: all 0.8s ease
+}
+
+.listen {
+    width: 135px;
+    height: 32px;
+    background: transparent;
+    color: white;
+    line-height: 32px;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: all 0.8s ease;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.seeVideoBtn:hover,
+.listen:hover {
+    background: white;
+    color: black;
+    line-height: 32px;
+}
+
+.birthVideo {
+    width: 620px;
+    height: 400px;
+}
+
+.birthVideobox {
+    position: relative
+}
+
+.secondBannerVideoBox {
+    width: 100%;
+    position: relative
+}
+
+.secondBannerVideo {
+    position: absolute;
+    left: -109px;
+    top: -309px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+
+/* -- responsive -- */
+
+@media only screen and (max-width:1280px) {
+    .w3ls_banner {
+        background-position: -122px -407px !important;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .w3ls_banner {
+        background-position: -206px -357px !important;
+    }
+}
+
+@media only screen and (max-width:800px) {
+    .header {
+        width: 720px;
+    }
+    .container-middle {
+        width: 685px;
+    }
+    .w3ls_two_couple_grid_left {
+        width: 295px;
+    }
+    .agileits_quotes_banner {
+        height: 250px;
+        background-position: -350px 0px !important;
+    }
+    .w3l_footer_top_left {
+        width: 215px;
+    }
+    .wthree_copy_right_grid_left {
+        width: 380px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .w3ls_banner {
+        height: 350px;
+    }
+    .agileits_figure_banner_btm_left {
+        width: 350px;
+    }
+}
+
+@media only screen and (max-width: 736px) {
+    .header {
+        width: 700px;
+    }
+    .container-middle {
+        width: 635px;
+    }
+    .w3_banner_bottom_left {
+        width: 190px;
+    }
+    .w3ls_two_couple_grid_left {
+        width: 272px;
+    }
+    .w3ls_two_couple_grid_left_grid {
+        width: 250px;
+    }
+    .w3l_footer_top_left {
+        width: 198px;
+    }
+    .wthree_footer_grid_left {
+        width: 300px;
+    }
+    .wthree_copy_right_grid_right {
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width: 667px) {
+    .container-middle {
+        width: 550px;
+    }
+    .header {
+        width: 600px;
+    }
+    .w3l_logo_nav_right {
+        width: 250px;
+    }
+    .w3_banner_bottom_left {
+        width: 163px;
+    }
+    img.couple {
+        width: 190px;
+        height: auto;
+    }
+    .agileits_figure_banner_btm_left1 {
+        width: 200px;
+    }
+    .agileits_figure_banner_btm_left {
+        width: 295px;
+    }
+    .w3l_velit {
+        font-size: 1.7em !important;
+    }
+    .w3l_couple_left {
+        height: 35px;
+    }
+    img.ribbon {
+        width: 25px;
+        height: auto;
+    }
+    .w3ls_two_couple_space {
+        width: 50px;
+    }
+    .w3ls_two_couple_grid_left {
+        width: 245px;
+    }
+    .agileits_quotes_banner {
+        height: 230px;
+        background-position: -420px 0px !important;
+    }
+    .w3l_footer_top_left_space {
+        width: 1px;
+    }
+    .w3l_footer_top_left {
+        width: 182px;
+    }
+    .w3ls_country {
+        display: inline-block !important;
+    }
+    .wthree_footer_grid_left_space {
+        width: 15px;
+    }
+    .wthree_footer_grid_left {
+        width: 266px;
+    }
+    .wthree_copy_right_grid_left {
+        width: 335px;
+    }
+    .agileinfo_copy_right_space {
+        height: 30px;
+    }
+    .agileinfo_footer_space {
+        height: 30px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .w3ls_banner {
+        background-position: -710px 0px !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container-middle {
+        width: 500px;
+    }
+    .header {
+        width: 570px;
+        <!-- w3layouts -->
+    }
+    .w3_banner_bottom_left_space {
+        width: 17px;
+    }
+    .w3_banner_bottom_left {
+        width: 155px;
+    }
+    .agileits_figure_banner_btm_left_space {
+        width: 10px;
+    }
+    .agileits_figure_banner_btm_left1 {
+        width: 190px;
+    }
+    .w3ls_two_couple_grid_left {
+        width: 220px;
+    }
+    .w3ls_two_couple_grid_left_grid {
+        width: 200px;
+    }
+    .w3l_footer_top_left {
+        width: 166px;
+    }
+    .wthree_footer_grid_left_space {
+        width: 15px;
+    }
+    .wthree_footer_grid_left {
+        width: 240px;
+    }
+    .wthree_copy_right_grid_left {
+        width: 100%;
+        text-align: center;
+    }
+    .wthree_copy_right_grid_right {
+        width: 100%;
+        text-align: center;
+    }
+    .wthree_weversion {
+        text-align: center;
+    }
+    .wthree_copy_right_grid_left_space {
+        height: 5px;
+    }
+}
+
+@media only screen and (max-width: 568px) {
+    .container {
+        width: 525px !important;
+    }
+    .header {
+        width: 545px;
+        <!-- agileits -->
+    }
+    .w3ls_two_couple_space {
+        width: 60px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .container {
+        width: 100% !important;
+    }
+    .container-middle {
+        width: 400px;
+    }
+    .header {
+        width: 310px;
+    }
+    .w3l_logo_nav_left {
+        width: 155px;
+    }
+    .w3l_logo_nav_right {
+        width: 220px;
+    }
+    .agile_line {
+        height: 10px;
+    }
+    img.wthree_ring {
+        width: 50px;
+        height: auto;
+    }
+    .banner_info_text {
+        font-size: 2.29em !important;
+    }
+    .w3_bg_text_space {
+        height: 15px;
+    }
+    .w3_banner_b_space {
+        height: 30px;
+    }
+    .w3_banner_bottom_left {
+        width: 100%;
+    }
+    .agileits_figure_banner_btm_left {
+        width: 100%;
+    }
+    .agileits_figure_banner_btm_left1 {
+        width: 100%;
+        text-align: center;
+    }
+    img.couple {
+        width: 200px;
+        <!-- w3layouts -->margin: 0 auto;
+    }
+    .agile_volup {
+        font-size: 2.1em !important;
+    }
+    .w3ls_two_couple_grid_left {
+        width: 100%;
+    }
+    .w3ls_two_couple_grid_left_grid {
+        width: 240px;
+    }
+    .agile_ribbon_space {
+        height: 0px;
+    }
+    .w3ls_two_couple_space {
+        width: 100%;
+        height: 65px;
+    }
+    .w3l_footer_top_left {
+        width: 100%;
+    }
+    .w3l_couple_left {
+        height: 15px;
+    }
+    .agileinfo_footer_top_space {
+        height: 30px;
+    }
+    .wthree_footer_grid_left,
+    .wthree_footer_grid_left_space {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:414px) {
+    table {
+        width: 100% !important;
+    }
+    .w3agile_banner_bottom_line {
+        width: 30px !important;
+    }
+    .w3agile_banner_bottom_line1 {
+        width: 100px !important;
+    }
+    .header {
+        width: 360px !important;
+    }
+    .w3l_logo_nav_left {
+        text-align: center;
+        line-height: 3em;
+    }
+    .w3ls_logo_text {
+        <!-- agileits -->font-size: 2.7em !important;
+    }
+    .w3l_logo_nav_right_nav {
+        text-align: center;
+    }
+    .banner_info_text {
+        font-size: 2em !important;
+    }
+    .w3ls_two_couple_grid_left_grid {
+        width: 275px !important;
+    }
+    .agileits_quotes_banner {
+        background-position: -565px 0px !important;
+    }
+    .w3agile_social_icons {
+        width: 115px !important;
+    }
+}
+
+@media only screen and (max-width: 384px) {
+    .header {
+        width: 335px !important;
+    }
+    .banner_info_text {
+        font-size: 1.9em !important;
+    }
+    .agile_volup {
+        font-size: 2em !important;
+    }
+    .agileits_quotes_banner {
+        height: 270px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .container-middle {
+        width: 340px !important;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .container-middle {
+        width: 275px !important;
+    }
+    .header {
+        width: 230px !important;
+    }
+    .agile_volup {
+        font-size: 1.9em !important;
+    }
+    .banner_info_text {
+        font-size: 1.5em !important;
+    }
+    .w3ls_banner {
+        background-position: -830px 0px !important;
+        height: 325px;
+    }
+    .w3l_velit {
+        font-size: 1.66em !important;
+    }
+    .w3l_couple_left {
+        height: 0px;
+    }
+    .w3ls_two_couple_grid_left_grid {
+        width: 245px !important;
+    }
+    .agileits_quotes_banner {
+        background-position: -610px 0px !important;
+    }
+    .agileits_time_date {
+        font-size: 1em !important;
+    }
+    .agileits_time_date_space {
+        height: 11px;
+    }
+}
