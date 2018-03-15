@@ -15,6 +15,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<meta name="keywords" content="Connubial Newsletter templates, Email Templates, Newsletters, Marketing  templates, 
 	Advertising templates, free Newsletter" />
 	<!-- //Custom Theme files -->
+	<link rel="stylesheet" href="./animate.css">
 	<!-- Responsive Styles and Valid Styles -->
 	<link rel="stylesheet" href="./index.css">
 	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
@@ -27,6 +28,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		var video = document.getElementById("myVideo");
 		var music = document.getElementById("backgroundMusic");
 		var birthSong = document.getElementById("birthSong");
+		var pic1Show = false;
+		var pic2Show = false;
 		$(".seeVideoBtn").click(function () {
 			music.pause();
 			$(".screen,.birthVideoFirst").fadeIn(300)
@@ -55,12 +58,67 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			if (birthSongPlay) {
 				music.pause();
 				birthSong.play();
+				birthSongPlay = false;
 			} else {
 				music.play();
 				birthSong.pause();
+				birthSongPlay = true;
+			}
+		})
+
+		// 监听屏幕
+		window.addEventListener("scroll", function (e) {
+			//alert("滚动了");
+			//变量t就是滚动条滚动时，到顶部的距离
+			var t1 = $("#part1Box").offset().top - $(window).scrollTop() - $(window).height();
+			if (t1 <= -100 && !pic1Show) {
+				$("#part1").fadeIn(800)
+				setTimeout(function () {
+					$("#part1").addClass("slideInRight")
+					$("#part1").addClass("animated")
+				})
+				pic1Show = true
+			}
+			var t2 = $("#part2Box").offset().top - $(window).scrollTop() - $(window).height();
+			if (t2 <= -100 && !pic2Show) {
+				$("#part2").fadeIn(800)
+				setTimeout(function () {
+					$("#part2").addClass("slideInLeft")
+					$("#part2").addClass("animated")
+				})
+				pic2Show = true
+			}
+			var t3 = $("#htyOrigin").offset().top - $(window).scrollTop() - $(window).height();
+
+			if (t3 <= -100) {
+				setTimeout(function () {
+					$("#htyOrigin").addClass("bounceOutUp")
+					$("#htyOrigin").addClass("animated")
+					setTimeout(function () {
+						$("#htyCarton").addClass("bounceInDown")
+						$("#htyCarton").addClass("animated")
+					}, 200)
+				}, 1000)
 			}
 
-		})
+			var t4 = $("#wfOrigin").offset().top - $(window).scrollTop() - $(window).height();
+			if (t4 <= -200) {
+				setTimeout(function () {
+					$("#wfOrigin").addClass("bounceOutUp")
+					$("#wfOrigin").addClass("animated")
+					setTimeout(function () {
+						$("#wfCarton").addClass("bounceInDown")
+						$("#wfCarton").addClass("animated")
+					}, 200)
+				}, 1000)
+			}
+
+		});
+
+
+
+
+
 	})
 
 </script>
@@ -71,24 +129,53 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</div>
 	<div class="birthVideoFirst" style="display:none">
 		<video id="myVideo" controls="" name="media" width="850" height="500">
-			<source src="https://jserk.oss-cn-shenzhen.aliyuncs.com/video/birth.mp4" type="">
+			<source src="https://jserk.oss-cn-shenzhen.aliyuncs.com/video/birth.mp4" type="video/mp4">
 		</video>
 	</div>
 	<div style="display:none">
 		<video id="backgroundMusic" autoplay controls="" name="media" width="850" height="500">
-			<source src="https://jserk.oss-cn-shenzhen.aliyuncs.com/music/BravoMyLife.mp3" type="">
+			<source src="https://jserk.oss-cn-shenzhen.aliyuncs.com/music/BravoMyLife.mp3" type="audio/mpeg">
 		</video>
 	</div>
 
 	<!-- <video controls="" autoplay="" name="media">
 		<source src="" type="audio/mpeg">
 	</video> -->
+	<div class="firstBanner">
+		<div class="firstBannerVideo">
+			<video controls="" autoplay loop name="media" width="1620" height="1000" style="margin-left:-20px;margin-top:-102px;">
+				<source src="http://jserk.oss-cn-shenzhen.aliyuncs.com/video/firstBanner.mp4" type="video/mp4">
+			</video>
+		</div>
+		<div class="firstBannerScreen">
+			<div class="bigWord">Winnie<br/>Happy Birthday~</div>
+			<br/>
+			<div class="smallWord">
+				<p>愿你</p>
+				<p>每天开开心心</p>
+				<p>平平安安</p>
+				<p>健健康康</p>
+			</div>
+			<div class="firstBannerNav">
+				<div class="navPart"> <a href="#banner"> 致最可爱的你</a></div>
+				<div class="navPart"><a href="#grow">成长</a></div>
+				<div class="navPart"><a href="#kids">18岁~</a></div>
+				<div class="navPart"><a href="#part1">我，会陪你</a></div>
+				<div class="navPart"><a href="#carton">卡通图</a></div>
+				<div class="navPart"><a href="#listenBirth">聆听</a></div>
+				<div class="navPart"><a href="#together">一起</a></div>
+			</div>
+			<div class="smallWord">
+				点击上方的词语或者鼠标向下滚哦~
+			</div>
+		</div>
 
+	</div>
 	<table border="0" width="100%" cellpadding="0" cellspacing="0">
 		<tr>
 			<td width="100%" align="center" valign="top">
 				<!-- banner -->
-				<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="container w3ls_banner" style="background:url(images/newBanner.jpeg) 0px 0px;"
+				<table id="banner" width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="container w3ls_banner" style="background:url(images/newBanner.jpeg) 0px -355px;margin-top: -150px;z-index:10"
 				 height="400">
 					<tr>
 						<td>
@@ -159,7 +246,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 																	<tr>
 																		<td align="center">
-																			<img src="images/1.png" alt=" " class="wthree_ring" width="64px" height="48px" />
+																			<div class="animated bounce">
+																				<img src="images/cake.png" alt=" " class="wthree_ring" width="64px" height="48px" />
+																			</div>
+
 																		</td>
 																	</tr>
 
@@ -287,8 +377,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 														<tr>
 															<td>
 
-																<table border="0" cellspacing="0" cellpadding="0" align="center">
-
+																<table id="grow" border="0" cellspacing="0" cellpadding="0" align="center">
 																	<tr>
 																		<td align="center" class="agile_volup" style="text-transform:capitalize;font-size:2.5em;color:#212121;font-family: Monotype Corsiva, Arial, sans-serif;">
 																			成&nbsp;长<span style="color:#1bcbdb;">  mature</span>
@@ -541,10 +630,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 													<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
 
-														<tr>
-															<td>
+														<tr id="part1Box">
+															<td id="part1" style="display:none">
 
-																<table width="400" border="0" cellpadding="0" cellspacing="0" align="left" class="agileits_figure_banner_btm_left">
+																<table id="kids" width="400" border="0" cellpadding="0" cellspacing="0" align="left" class="agileits_figure_banner_btm_left">
 
 																	<tr>
 																		<td height="55" class="w3l_couple_left"></td>
@@ -599,7 +688,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 																	<tr>
 																		<td>
-																			<img src="images/wfpic1.jpeg" alt=" " class="couple" width="250" height="330" style="display:block;" />
+																			<img src="images/wfOrigin.jpeg" alt=" " class="couple part1" width="250" height="300" style="display:block;" />
 																		</td>
 																	</tr>
 
@@ -616,10 +705,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 											<tr>
 												<td>
 													<div style='margin-top:100px'></div>
-													<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+													<table id="part2Box" width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
 
 														<tr>
-															<td>
+															<td id="part2" style="display:none">
 
 																<table width="400" border="0" cellpadding="0" cellspacing="0" align="left" class="agileits_figure_banner_btm_left">
 
@@ -675,7 +764,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 																	<tr>
 																		<td>
-																			<img src="images/hty.jpeg" alt=" " class="couple" width="250" height="304" style="display:block;" />
+																			<img src="images/htyOrigin.jpeg" alt=" " class="couple" width="250" height="304" style="display:block;padding-bottom:25px"
+																			/>
 																		</td>
 																	</tr>
 
@@ -693,6 +783,29 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 												<td height="50" class="w3_banner_b_space" style="border-top:1px solid #999;"></td>
 											</tr>
 
+											<tr>
+												<td style="text-align:center">
+													<div id="carton" class="picChangebox">
+														<div class="picOrigin" id="htyOrigin" style="z-index:1">
+															<img src="./images/htyOrigin.jpeg" alt="">
+														</div>
+														<div class="picOrigin" id="htyCarton">
+															<img src="./images/hty.jpeg" alt="">
+														</div>
+													</div>
+													<div class="picChangebox">
+														<div class="picOrigin" id="wfOrigin" style="z-index:1;height:460px;">
+
+															<img src="./images/wfOrigin.jpeg" alt="">
+														</div>
+														<div class="picOrigin" id="wfCarton" style="height:497px;">
+															<img src="./images/wf.jpeg" alt="">
+														</div>
+													</div>
+
+
+												</td>
+											</tr>
 											<tr>
 												<td>
 
@@ -782,7 +895,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 																							<tr>
 																								<td align="center">
-																									<img src="images/wf1.jpeg" alt=" " class="couple_single" width="80" height="80" />
+																									<img src="images/wf.jpeg" alt=" " class="couple_single" width="80" height="80" />
 																								</td>
 																							</tr>
 
@@ -838,6 +951,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 				</table>
 
+
 				<!-- figure-banner-bottom -->
 
 				<!-- quotes-banner -->
@@ -853,7 +967,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<tr>
 									<td>
 
-										<table class="container-middle" width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+										<table id="listenBirth" class="container-middle" width="700" border="0" align="center" cellpadding="0" cellspacing="0">
 
 											<tr>
 												<td>
@@ -1000,11 +1114,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 												<td>
 
-													<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+													<table id="together" width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
 
 														<tr>
 															<td align="center">
-																<img src="images/youAndMe.jpeg" alt=" " class="men_women" width="520" height="520" />
+																<img src="images/youAndMe.jpeg" alt=" " class="men_women" width="520" height="420" />
 															</td>
 														</tr>
 
@@ -1038,7 +1152,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 																<div class="birthVideobox">
 																	<div class="birthVideo">
 																		<video controls="" name="media" width="620" height="400">
-																			<source src="https://jserk.oss-cn-shenzhen.aliyuncs.com/video/birth.mp4" type="">
+																			<source src="https://jserk.oss-cn-shenzhen.aliyuncs.com/video/birth.mp4" type="video/mp4">
 																		</video>
 																	</div>
 																</div>
